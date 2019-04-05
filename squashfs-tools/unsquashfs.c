@@ -37,6 +37,9 @@
 #include <sys/resource.h>
 #include <limits.h>
 #include <ctype.h>
+#if __GLIBC__ >= 2 && __GLIBC_MINOR__ >= 26
+#include <sys/sysmacros.h>
+#endif
 
 struct cache *fragment_cache, *data_cache;
 struct queue *to_reader, *to_inflate, *to_writer, *from_writer;

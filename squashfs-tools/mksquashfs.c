@@ -50,6 +50,9 @@
 #include <sys/wait.h>
 #include <limits.h>
 #include <ctype.h>
+#if __GLIBC__ >= 2 && __GLIBC_MINOR__ >= 26
+#include <sys/sysmacros.h>
+#endif
 
 #ifndef linux
 #define __BYTE_ORDER BYTE_ORDER
